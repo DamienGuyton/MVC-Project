@@ -1,0 +1,19 @@
+﻿@model DamienGuytonMVC.Models.Player
+           
+@{
+    ViewBag.Title = "SignupForm";
+}
+<img alt="Silhouette of a horse" src="../../Content/horse-left.png" style="float:left; " />
+<img alt="Silhouette of a horse" src="../../Content/horse-right.png" style="float:right;" />
+
+<form action="Signup" method="post">
+    <h1>Sweepstake Entry</h1>
+    <h1>First Name</h1>
+    <input type="text" class="name" name="FirstName"/><br />
+    @Html.ValidationMessageFor(x=>x.FirstName)<br />
+    <h1>Last Name</h1>
+    <input type="text" name="LastName" class="name"/><br />
+    @Html.ValidationMessageFor(x=>x.LastName)<br />
+    <input type="submit" name="submit" value="Submit" class="submit" />
+</form>
+

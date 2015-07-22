@@ -1,0 +1,22 @@
+﻿@model List<DamienGuytonMVC.Models.Horse>
+
+@{
+    ViewBag.Title = "Entrants";
+}
+
+<h1>Entrants</h1>
+<table>
+    <tr>
+        <th>Player</th>
+        <th>Horse</th> 
+    </tr>
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <tr>
+            <td>@Model[i].Player.FirstName @Model[i].Player.LastName</td>
+            <td>@Model[i].Name</td>
+        </tr>		    
+    }
+</table>
+<br />
+<br />
